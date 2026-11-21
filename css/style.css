@@ -436,11 +436,24 @@ h1, h2, h3, p { margin: 0; }
 .newsletter__consent input { margin-top: 3px; }
 
 /* ---------- Footer ---------- */
-.footer { background: var(--white); padding: 48px clamp(20px, 8vw, 96px); display: flex; flex-direction: column; gap: 32px; }
+.footer { background: var(--white); padding: 36px clamp(20px, 8vw, 96px); display: flex; flex-direction: column; gap: 24px; }
 .footer__top { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-.footer__brand { display: flex; flex-direction: column; gap: 18px; max-width: 310px; }
-.footer__brand img { height: 90px; width: auto; }
-.footer__brand p { color: var(--muted); font-weight: 500; }
+.footer__brand {
+  align-self: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.26em;
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.15;
+}
+.footer__brand:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.footer__brand > span > span:nth-child(5n + 1) { color: #b52358; }
+.footer__brand > span > span:nth-child(5n + 2) { color: #006b82; }
+.footer__brand > span > span:nth-child(5n + 3) { color: #926000; }
+.footer__brand > span > span:nth-child(5n + 4) { color: #6745a5; }
+.footer__brand > span > span:nth-child(5n + 5) { color: #346e2d; }
 .footer__links { display: flex; flex-direction: column; gap: 12px; }
 .footer__links a { font-weight: 700; font-size: 1rem; }
 .footer hr { border: none; border-top: 1px solid var(--border); margin: 0; }
