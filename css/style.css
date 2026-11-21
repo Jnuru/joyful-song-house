@@ -75,14 +75,12 @@ h1, h2, h3, p { margin: 0; }
   line-height: 1.5;
   max-width: 48ch;
 }
-.lede--dark { color: var(--ink); }
 
 .fine-print {
   font-weight: 700;
   font-size: 0.875rem;
   color: var(--muted);
 }
-.fine-print--dark { color: var(--ink); }
 
 .link-arrow {
   font-weight: 900;
@@ -294,13 +292,13 @@ h1, h2, h3, p { margin: 0; }
 
 /* Keep section headings clear of the wrapping sticky navigation. */
 @media (max-width: 980px) {
-  :is(.songs, .themes, .printable) { scroll-margin-top: 100px; }
+  :is(.songs, .themes) { scroll-margin-top: 100px; }
 }
 @media (max-width: 460px) {
-  :is(.songs, .themes, .printable) { scroll-margin-top: 130px; }
+  :is(.songs, .themes) { scroll-margin-top: 130px; }
 }
 @media (max-width: 375px) {
-  :is(.songs, .themes, .printable) { scroll-margin-top: 165px; }
+  :is(.songs, .themes) { scroll-margin-top: 165px; }
 }
 
 /* ---------- Dance prompts ---------- */
@@ -316,16 +314,13 @@ h1, h2, h3, p { margin: 0; }
 }
 .theme-card {
   display: grid;
-  align-content: start;
+  grid-template-columns: minmax(0, 1fr) clamp(76px, 8vw, 110px);
+  align-content: center;
+  align-items: center;
   gap: 10px;
   text-align: left;
   padding: clamp(20px, 3vw, 28px);
   border-radius: 24px;
-}
-.theme-card--illustrated {
-  grid-template-columns: minmax(0, 1fr) clamp(76px, 8vw, 110px);
-  align-content: center;
-  align-items: center;
   overflow: hidden;
 }
 .theme-card__copy { display: grid; gap: 10px; }
@@ -347,86 +342,6 @@ h1, h2, h3, p { margin: 0; }
 
 @media (max-width: 820px) {
   .theme-grid { grid-template-columns: minmax(0, 1fr); max-width: 420px; }
-}
-
-/* ---------- Printable ---------- */
-.printable {
-  background: var(--yellow);
-  display: flex;
-  align-items: center;
-  gap: clamp(32px, 6vw, 72px);
-  flex-wrap: wrap;
-}
-.printable__art {
-  position: relative;
-  width: min(560px, 100%);
-  aspect-ratio: 560 / 470;
-  height: auto;
-}
-.printable__backdrop {
-  position: absolute;
-  left: 0;
-  top: 7%;
-  width: 100%;
-  height: 87%;
-  background: var(--cream);
-  border-radius: 40px;
-}
-.printable__character {
-  position: absolute;
-  right: -2%;
-  bottom: 6%;
-  width: 46%;
-  height: auto;
-}
-.printable__sheet {
-  position: absolute;
-  left: 12%;
-  top: 0;
-  width: 58%;
-  max-width: 330px;
-  background: var(--white);
-  border: 2px solid var(--ink);
-  border-radius: 12px;
-  box-shadow: 0 12px 24px rgba(41, 40, 45, 0.08);
-  padding: clamp(10px, 2vw, 26px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: clamp(8px, 1.8vw, 14px);
-  text-align: center;
-  transform: rotate(-5deg);
-}
-.printable__sheet h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: clamp(1.1rem, 4.5vw, 1.6rem);
-}
-.printable__sheet-sub { font-weight: 700; font-size: clamp(0.65rem, 2vw, 0.8rem); }
-.printable__rainbow { width: 65%; height: auto; }
-.printable__dots, .printable__prompts {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.printable__dots img { width: clamp(20px, 6vw, 40px); height: auto; }
-.printable__prompts img { width: clamp(20px, 6vw, 40px); height: auto; }
-.printable__prompts span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  font-weight: 900;
-  font-size: 0.625rem;
-}
-.printable__name { font-size: 0.65rem; }
-.printable__brand { font-weight: 900; font-size: 0.55rem; }
-.printable__copy {
-  flex: 1 1 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
 }
 
 /* ---------- Mission / parents ---------- */
@@ -547,8 +462,8 @@ h1, h2, h3, p { margin: 0; }
   .benefit-grid, .community-grid { justify-content: center; }
   .mission__intro { flex-direction: column; }
   .mission__headline, .mission__intro .lede { flex-basis: auto; }
-  .printable, .newsletter { flex-direction: column; }
-  .printable__copy, .newsletter__copy, .newsletter__form { width: 100%; flex-basis: auto; }
+  .newsletter { flex-direction: column; }
+  .newsletter__copy, .newsletter__form { width: 100%; flex-basis: auto; }
   .community-card { flex-direction: column; text-align: center; }
   .community-card__copy { align-items: center; }
   .footer__top { flex-direction: column; }
@@ -557,5 +472,4 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 480px) {
   .btn { font-size: 0.9375rem; padding: 13px 20px; }
   .hero__bubble p { font-size: 1.1rem; }
-  .printable__art { aspect-ratio: 3 / 4; }
 }
