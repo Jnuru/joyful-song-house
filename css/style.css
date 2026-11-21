@@ -119,17 +119,15 @@ h1, h2, h3, p { margin: 0; }
 .tag--cream { background: var(--cream); }
 .tag--lavender { background: var(--lavender-bg); }
 
-/* character sprite (shared illustration sheet) */
-.sprite {
-  background-image: url('../assets/character-sprite.png');
-  background-repeat: no-repeat;
+/* placeholder slots, reserved for mascot artwork to be dropped in later */
+.char-slot {
+  background: rgba(41, 40, 45, 0.05);
+  border: 1.5px dashed rgba(41, 40, 45, 0.18);
   border-radius: 12px;
   flex-shrink: 0;
 }
-.sprite--thumb { width: 172px; height: 156px; background-size: 886.55px 591.03px; }
-.sprite--card { width: 205px; height: 186px; background-size: 1056.64px 704.43px; }
-.sprite--pip { width: 190px; height: 172px; background-size: 979.33px 652.89px; border-radius: 13px; }
-.sprite--community { width: 160px; height: 145px; background-size: 824.7px 549.8px; }
+.char-slot--thumb { width: 172px; height: 156px; }
+.char-slot--card { width: 205px; height: 186px; }
 
 /* ---------- Navigation ---------- */
 .nav {
@@ -192,7 +190,6 @@ h1, h2, h3, p { margin: 0; }
   border-radius: 999px;
   overflow: hidden;
 }
-.hero__medallion img { width: 100%; height: 100%; object-fit: cover; }
 .hero__bubble {
   position: absolute;
   right: 0;
@@ -403,25 +400,28 @@ h1, h2, h3, p { margin: 0; }
   border: 2px solid var(--ink);
   border-radius: 12px;
   box-shadow: 0 12px 24px rgba(41, 40, 45, 0.08);
-  padding: clamp(14px, 2vw, 26px);
+  padding: clamp(10px, 2vw, 26px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: clamp(8px, 1.8vw, 14px);
   text-align: center;
   transform: rotate(-5deg);
 }
 .printable__sheet h3 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: clamp(1.1rem, 4.5vw, 1.6rem);
 }
-.printable__sheet-sub { font-weight: 700; font-size: 0.8rem; }
+.printable__sheet-sub { font-weight: 700; font-size: clamp(0.65rem, 2vw, 0.8rem); }
+.printable__rainbow { width: 65%; height: auto; }
 .printable__dots, .printable__prompts {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
+.printable__dots img { width: clamp(20px, 6vw, 40px); height: auto; }
+.printable__prompts img { width: clamp(20px, 6vw, 40px); height: auto; }
 .printable__prompts span {
   display: flex;
   flex-direction: column;
@@ -432,12 +432,6 @@ h1, h2, h3, p { margin: 0; }
 }
 .printable__name { font-size: 0.65rem; }
 .printable__brand { font-weight: 900; font-size: 0.55rem; }
-.printable__pip {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: rotate(7deg);
-}
 .printable__copy {
   flex: 1 1 400px;
   display: flex;
@@ -574,4 +568,5 @@ h1, h2, h3, p { margin: 0; }
 @media (max-width: 480px) {
   .btn { font-size: 0.9375rem; padding: 13px 20px; }
   .hero__bubble p { font-size: 1.1rem; }
+  .printable__art { aspect-ratio: 3 / 4; }
 }
