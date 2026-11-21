@@ -56,9 +56,30 @@
   </section>
 
   <div class="ribbon">
-    <p>Sing it out</p>
-    <p>Wiggle it out</p>
-    <p>Grow together</p>
+    <div class="ribbon__viewport">
+      <div class="ribbon__track">
+        <div class="ribbon__group">
+          <p>Sing it out</p>
+          <span class="ribbon__note" aria-hidden="true">♪</span>
+          <p>Wiggle it out</p>
+          <span class="ribbon__note" aria-hidden="true">♫</span>
+          <p>Grow together</p>
+          <span class="ribbon__note" aria-hidden="true">♪</span>
+        </div>
+        <div class="ribbon__group" aria-hidden="true">
+          <p>Sing it out</p>
+          <span class="ribbon__note" aria-hidden="true">♪</span>
+          <p>Wiggle it out</p>
+          <span class="ribbon__note" aria-hidden="true">♫</span>
+          <p>Grow together</p>
+          <span class="ribbon__note" aria-hidden="true">♪</span>
+        </div>
+      </div>
+    </div>
+    <button class="ribbon__toggle" type="button" aria-label="Pause ribbon animation" aria-pressed="false" hidden>
+      <span class="ribbon__pause" aria-hidden="true">Ⅱ</span>
+      <span class="ribbon__play" aria-hidden="true">▶</span>
+    </button>
   </div>
 
   <section id="songs" class="section songs" aria-labelledby="featured-song-title">
@@ -180,6 +201,20 @@
     <p>Privacy policy&nbsp;&nbsp;&bull;&nbsp;&nbsp;Terms&nbsp;&nbsp;&bull;&nbsp;&nbsp;Grown-ups, please supervise play.</p>
   </div>
 </footer>
+
+<script>
+  const ribbon = document.querySelector('.ribbon');
+  const ribbonToggle = ribbon.querySelector('.ribbon__toggle');
+
+  ribbonToggle.addEventListener('click', () => {
+    const paused = ribbonToggle.getAttribute('aria-pressed') === 'false';
+    ribbonToggle.setAttribute('aria-pressed', String(paused));
+    ribbon.dataset.motion = paused ? 'paused' : 'playing';
+  });
+
+  ribbon.dataset.motion = 'playing';
+  ribbonToggle.hidden = false;
+</script>
 
 </body>
 </html>

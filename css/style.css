@@ -206,16 +206,83 @@ h1, h2, h3, p { margin: 0; }
 /* ---------- Ribbon ---------- */
 .ribbon {
   background: var(--blue);
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding: 20px clamp(20px, 8vw, 96px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
 }
-.ribbon p {
+.ribbon__viewport { overflow: hidden; }
+.ribbon__group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  min-height: 72px;
+  padding: 12px 20px;
+  line-height: 1.15;
+}
+.ribbon__group p {
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(1.1rem, 2.4vw, 1.625rem);
+}
+.ribbon__note {
+  --ribbon-lift: -8px;
+  color: var(--cream);
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+.ribbon__group[aria-hidden="true"], .ribbon__toggle { display: none; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .ribbon[data-motion] .ribbon__track {
+    display: flex;
+    width: max-content;
+    animation: ribbon-scroll 24s linear infinite;
+  }
+  .ribbon[data-motion] .ribbon__group {
+    display: flex;
+    flex: 0 0 auto;
+    width: max(640px, 100vw);
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  .ribbon[data-motion] .ribbon__group > * {
+    animation: ribbon-bounce 1.25s ease-in-out infinite;
+  }
+  .ribbon[data-motion] .ribbon__group > :nth-child(3n + 2) { animation-delay: -0.25s; }
+  .ribbon[data-motion] .ribbon__group > :nth-child(3n) { animation-delay: -0.5s; }
+  .ribbon[data-motion="paused"] .ribbon__track,
+  .ribbon[data-motion="paused"] .ribbon__group > * {
+    animation-play-state: paused;
+  }
+  .ribbon[data-motion] .ribbon__toggle:not([hidden]) {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 12px;
+    padding: 0;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .ribbon__toggle:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  .ribbon__play,
+  .ribbon__toggle[aria-pressed="true"] .ribbon__pause { display: none; }
+  .ribbon__toggle[aria-pressed="true"] .ribbon__play { display: block; }
+
+  @keyframes ribbon-scroll {
+    to { transform: translateX(-50%); }
+  }
+  @keyframes ribbon-bounce {
+    0%, 52%, 100% { transform: translateY(0); }
+    24% { transform: translateY(var(--ribbon-lift, -5px)); }
+  }
 }
 
 /* ---------- Generic section ---------- */
