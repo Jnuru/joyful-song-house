@@ -404,37 +404,6 @@ h1, h2, h3, p { margin: 0; }
 }
 .community-card__copy p { color: var(--muted); font-weight: 500; }
 
-/* ---------- Newsletter ---------- */
-.newsletter {
-  background: var(--pink-bg);
-  display: flex;
-  align-items: center;
-  gap: clamp(32px, 6vw, 72px);
-  flex-wrap: wrap;
-}
-.newsletter__copy { flex: 1 1 400px; display: flex; flex-direction: column; gap: 16px; max-width: 555px; }
-.newsletter__form { flex: 1 1 400px; display: flex; flex-direction: column; gap: 16px; }
-.newsletter__form label { font-weight: 900; font-size: 0.9375rem; }
-.newsletter__row { display: flex; gap: 12px; flex-wrap: wrap; }
-.newsletter__row input {
-  flex: 1 1 220px;
-  height: 56px;
-  border: 1.5px solid var(--ink);
-  border-radius: 16px;
-  padding: 0 18px;
-  font-family: var(--font-body);
-  font-size: 1rem;
-}
-.newsletter__consent {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-weight: 400;
-  font-size: 0.8125rem;
-  color: var(--muted);
-}
-.newsletter__consent input { margin-top: 3px; }
-
 /* ---------- Footer ---------- */
 .footer { background: var(--white); padding: 36px clamp(20px, 8vw, 96px); display: flex; flex-direction: column; gap: 24px; }
 .footer__top { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
@@ -462,8 +431,6 @@ h1, h2, h3, p { margin: 0; }
   .benefit-grid, .community-grid { justify-content: center; }
   .mission__intro { flex-direction: column; }
   .mission__headline, .mission__intro .lede { flex-basis: auto; }
-  .newsletter { flex-direction: column; }
-  .newsletter__copy, .newsletter__form { width: 100%; flex-basis: auto; }
   .community-card { flex-direction: column; text-align: center; }
   .community-card__copy { align-items: center; }
   .footer__top { flex-direction: column; }
