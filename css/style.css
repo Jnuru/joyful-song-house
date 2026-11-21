@@ -131,13 +131,20 @@ h1, h2, h3, p { margin: 0; }
 .char-photo--thumb { width: 172px; height: 156px; }
 .char-photo--card {
   width: 100%;
-  height: auto;
-  aspect-ratio: 205 / 186;
+  height: 100%;
   flex-shrink: 1;
+  object-fit: contain;
+}
+.char-frame {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.char-frame--card {
+  width: 100%;
+  aspect-ratio: 205 / 186;
   background: var(--paper);
   padding: 8%;
   box-sizing: border-box;
-  object-fit: contain;
 }
 
 /* ---------- Navigation ---------- */
@@ -208,12 +215,13 @@ h1, h2, h3, p { margin: 0; }
   border-radius: 999px;
   overflow: hidden;
   background: var(--paper);
-}
-.hero__medallion img {
-  width: 100%;
-  height: 100%;
   padding: 5%;
   box-sizing: border-box;
+}
+.hero__medallion img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   object-position: 50% 50%;
 }
