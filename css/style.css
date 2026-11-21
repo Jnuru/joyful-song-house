@@ -1,5 +1,6 @@
 :root {
   --cream: #fff8e8;
+  --paper: #fdeed5;
   --white: #ffffff;
   --ink: #29282d;
   --muted: #5b5865;
@@ -128,7 +129,16 @@ h1, h2, h3, p { margin: 0; }
   display: block;
 }
 .char-photo--thumb { width: 172px; height: 156px; }
-.char-photo--card { width: 100%; height: auto; aspect-ratio: 205 / 186; flex-shrink: 1; }
+.char-photo--card {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 205 / 186;
+  flex-shrink: 1;
+  background: var(--paper);
+  padding: 8%;
+  box-sizing: border-box;
+  object-fit: contain;
+}
 
 /* ---------- Navigation ---------- */
 .nav {
@@ -197,11 +207,14 @@ h1, h2, h3, p { margin: 0; }
   aspect-ratio: 1;
   border-radius: 999px;
   overflow: hidden;
+  background: var(--paper);
 }
 .hero__medallion img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  padding: 11%;
+  box-sizing: border-box;
+  object-fit: contain;
   object-position: 50% 50%;
 }
 .hero__bubble {
