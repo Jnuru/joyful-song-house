@@ -19,7 +19,6 @@
   <nav class="nav__links" aria-label="Primary">
     <a href="#top" class="nav__link nav__link--active">Home</a>
     <a href="#songs" class="nav__link">Songs &amp; videos</a>
-    <a href="#friends" class="nav__link">Meet the friends</a>
     <a href="#activities" class="nav__link">Activities</a>
     <a href="#parents" class="nav__link">For parents</a>
     <a href="#" class="btn btn--pill btn--pink">
@@ -41,7 +40,7 @@
           <img src="assets/icon-play.svg" alt="" width="20" height="20">
           Watch a singalong
         </a>
-        <a href="#friends" class="btn btn--pill btn--outline">Explore the Songhouse</a>
+        <a href="#activities" class="btn btn--pill btn--outline">Explore the Songhouse</a>
       </div>
       <p class="fine-print">Made for singing, moving &amp; playing together.</p>
     </div>
@@ -83,10 +82,12 @@
   <section id="activities" class="section themes" aria-labelledby="dance-prompts-title">
     <h2 id="dance-prompts-title" class="headline">How shall we move?</h2>
     <ul class="theme-grid">
-      <li class="theme-card theme-card--blue">
-        <img src="assets/icon-music-theme.svg" alt="" width="40" height="40">
-        <h3>Wiggle</h3>
-        <p>Shake your arms like Squiddo.</p>
+      <li class="theme-card theme-card--blue theme-card--illustrated">
+        <div class="theme-card__copy">
+          <h3>Wiggle</h3>
+          <p>Wiggle your arms, then give a little twirl.</p>
+        </div>
+        <img class="theme-card__character" src="assets/buttercup.png" alt="" width="704" height="704" loading="lazy">
       </li>
       <li class="theme-card theme-card--yellow">
         <svg viewBox="0 0 40 40" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -95,68 +96,20 @@
         <h3>Clap</h3>
         <p>Clap along to the beat.</p>
       </li>
-      <li class="theme-card theme-card--pink">
-        <svg viewBox="0 0 40 40" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="20" cy="20" r="16"/>
-          <rect x="14" y="13" width="3.5" height="14" rx="1"/>
-          <rect x="22.5" y="13" width="3.5" height="14" rx="1"/>
-        </svg>
-        <h3>Freeze</h3>
-        <p>Strike a silly pose when the music stops.</p>
+      <li class="theme-card theme-card--pink theme-card--illustrated">
+        <div class="theme-card__copy">
+          <h3>Freeze</h3>
+          <p>Strike a silly pose when the music stops.</p>
+        </div>
+        <img class="theme-card__character" src="assets/stripe.png" alt="" width="704" height="704" loading="lazy">
       </li>
     </ul>
   </section>
 
-  <section id="friends" class="section friends">
-    <div class="section__intro section__intro--center">
-      <p class="eyebrow">Four friends. One happy home.</p>
-      <h2 class="headline">Your new singalong crew.</h2>
-      <p class="sub">Different little personalities. A whole lot of heart.</p>
-    </div>
-
-    <div class="friend-grid">
-      <article class="friend-card">
-        <div class="char-frame char-frame--card">
-          <img class="char-photo char-photo--card" src="assets/char-squiddo.jpg" alt="Squiddo the pink squid">
-        </div>
-        <h3>Squiddo</h3>
-        <p class="friend-card__role">The dancing squid</p>
-        <p class="friend-card__desc">Energetic, silly, loves to dance.</p>
-        <span class="friend-card__accent" style="background:#59c8e8"></span>
-      </article>
-      <article class="friend-card">
-        <div class="char-frame char-frame--card">
-          <img class="char-photo char-photo--card" src="assets/char-buttercup.jpg" alt="Buttercup the ballerina bull">
-        </div>
-        <h3>Buttercup</h3>
-        <p class="friend-card__role">The graceful dancer</p>
-        <p class="friend-card__desc">Gentle, elegant, loves to twirl.</p>
-        <span class="friend-card__accent" style="background:#fe7587"></span>
-      </article>
-      <article class="friend-card">
-        <div class="char-frame char-frame--card">
-          <img class="char-photo char-photo--card" src="assets/char-splash.jpg" alt="Splash the axolotl">
-        </div>
-        <h3>Splash</h3>
-        <p class="friend-card__role">The energetic mover</p>
-        <p class="friend-card__desc">Bold, bouncy, ready to play.</p>
-        <span class="friend-card__accent" style="background:#8c72d9"></span>
-      </article>
-      <article class="friend-card">
-        <div class="char-frame char-frame--card">
-          <img class="char-photo char-photo--card" src="assets/char-stripe.jpg" alt="Stripe the tiger">
-        </div>
-        <h3>Stripe</h3>
-        <p class="friend-card__role">The playful tiger</p>
-        <p class="friend-card__desc">Confident, cheerful, full of spirit.</p>
-        <span class="friend-card__accent" style="background:#ffd83d"></span>
-      </article>
-    </div>
-  </section>
-
-  <section class="section printable">
+  <section id="printable" class="section printable">
     <div class="printable__art">
       <div class="printable__backdrop"></div>
+      <img class="printable__character" src="assets/splash.png" alt="" width="704" height="704" loading="lazy">
       <div class="printable__sheet">
         <h3>Rainbow rhythm hunt</h3>
         <p class="printable__sheet-sub">Find a color. Make a sound. Color it in!</p>
@@ -179,7 +132,7 @@
     <div class="printable__copy">
       <p class="eyebrow">Little hands. Big imagination.</p>
       <h2 class="display display--sm">Take the happy off-screen.</h2>
-      <p class="lede lede--dark">Keep the fun going with Splash&rsquo;s Rainbow Rhythm Hunt. Find colors around your home, make a silly beat, then color your own rainbow.</p>
+      <p class="lede lede--dark">Keep the fun going with the Rainbow Rhythm Hunt. Find colors around your home, make a silly beat, then color your own rainbow.</p>
       <p class="fine-print fine-print--dark">Free printable &bull; Color hunt + rhythm play &bull; Grown-up friendly</p>
       <a href="#" class="btn btn--pill btn--pink">
         <img src="assets/icon-download.svg" alt="" width="20" height="20">
@@ -271,8 +224,7 @@
     <div class="footer__links">
       <p class="eyebrow">Explore</p>
       <a href="#songs">Songs &amp; videos</a>
-      <a href="#friends">Meet the friends</a>
-      <a href="#activities">Printable activities</a>
+      <a href="#printable">Printable activities</a>
     </div>
     <div class="footer__links">
       <p class="eyebrow">For grown-ups</p>
