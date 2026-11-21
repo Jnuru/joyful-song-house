@@ -286,13 +286,13 @@ h1, h2, h3, p { margin: 0; }
 }
 .featured-song {
   display: grid;
-  grid-template-columns: minmax(0, 464px) minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "cover heading"
     "cover details";
   gap: 16px clamp(32px, 6vw, 80px);
-  max-width: 1024px;
+  max-width: 1008px;
   margin-inline: auto;
 }
 .featured-song__heading {
