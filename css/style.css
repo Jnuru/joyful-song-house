@@ -1,5 +1,5 @@
 :root {
-  --cream: #fff8e8;
+  --cream: #fffbf2;
   --paper: #fdeed5;
   --white: #ffffff;
   --ink: #29282d;
@@ -27,7 +27,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--ink);
-  background: var(--white);
+  background: var(--cream);
 }
 
 img { max-width: 100%; display: block; }
@@ -120,7 +120,7 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- Navigation ---------- */
 .nav {
-  background: var(--white);
+  background: var(--cream);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -146,7 +146,6 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- Hero ---------- */
 .hero {
-  background: var(--cream);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,22 +195,6 @@ h1, h2, h3, p { margin: 0; }
   object-fit: contain;
   object-position: 50% 50%;
 }
-.hero__bubble {
-  position: absolute;
-  right: 0;
-  top: 2%;
-  background: var(--white);
-  border: 2px solid var(--ink);
-  border-radius: 999px;
-  padding: 12px 20px;
-  transform: rotate(7deg);
-}
-.hero__bubble p {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.5rem;
-  white-space: nowrap;
-}
 .hero__note--1 {
   position: absolute;
   left: 2%;
@@ -241,7 +224,6 @@ h1, h2, h3, p { margin: 0; }
 }
 /* ---------- Songs ---------- */
 .songs {
-  background: var(--blue-bg);
   padding: clamp(40px, 5vw, 72px) clamp(20px, 6vw, 96px);
 }
 .featured-song {
@@ -302,7 +284,7 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* ---------- Dance prompts ---------- */
-.themes { background: var(--cream); text-align: center; }
+.themes { text-align: center; }
 .theme-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -345,7 +327,7 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* ---------- Mission / parents ---------- */
-.mission { background: var(--white); display: flex; flex-direction: column; gap: 40px; }
+.mission { display: flex; flex-direction: column; gap: 40px; }
 .mission__intro {
   display: flex;
   gap: clamp(24px, 6vw, 80px);
@@ -384,10 +366,11 @@ h1, h2, h3, p { margin: 0; }
 .benefit-card--lavender { background: var(--lavender-bg); }
 
 /* ---------- Community ---------- */
-.community { background: var(--lavender-bg); display: flex; flex-direction: column; gap: 32px; }
+.community { display: flex; flex-direction: column; gap: 32px; }
 .community-grid { display: flex; gap: 24px; flex-wrap: wrap; }
 .community-card {
   background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 24px;
   padding: 28px;
   display: flex;
@@ -405,7 +388,7 @@ h1, h2, h3, p { margin: 0; }
 .community-card__copy p { color: var(--muted); font-weight: 500; }
 
 /* ---------- Footer ---------- */
-.footer { background: var(--white); padding: 36px clamp(20px, 8vw, 96px); display: flex; flex-direction: column; gap: 24px; }
+.footer { padding: 36px clamp(20px, 8vw, 96px); display: flex; flex-direction: column; gap: 24px; }
 .footer__top { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
 .footer__brand { align-self: flex-start; width: min(160px, 100%); }
 .footer__brand img { width: 100%; height: auto; }
@@ -438,5 +421,4 @@ h1, h2, h3, p { margin: 0; }
 
 @media (max-width: 480px) {
   .btn { font-size: 0.9375rem; padding: 13px 20px; }
-  .hero__bubble p { font-size: 1.1rem; }
 }
