@@ -65,26 +65,19 @@
     <p>Grow together</p>
   </div>
 
-  <section id="songs" class="section songs">
-    <div class="section__intro section__intro--center">
-      <p class="eyebrow">Press play on happy</p>
-      <h2 class="headline">A song for your today.</h2>
-      <p class="sub">Little adventures you can sing along to. More on the way!</p>
-    </div>
-
-    <div class="song-grid song-grid--single">
-      <article class="song-card song-card--feature">
-        <div class="song-card__art">
-          <img class="song-card__photo" src="assets/song-squid-squirm.jpg" alt="Squid Squirm: a pirate-adventure singalong">
-          <span class="song-card__play"><img src="assets/icon-play-sm.svg" alt="Play video" width="18" height="18"></span>
-        </div>
-        <div class="song-card__body">
-          <span class="tag tag--blue">Adventure &bull; New this Monday</span>
-          <h3>Squid Squirm</h3>
-          <p>Ahoy! A pirate singalong with Squiddo.</p>
-        </div>
-      </article>
-    </div>
+  <section id="songs" class="section songs" aria-labelledby="featured-song-title">
+    <article class="featured-song">
+      <header class="featured-song__heading">
+        <p class="eyebrow">Featured singalong</p>
+        <h2 id="featured-song-title" class="headline">Squid Squirm</h2>
+      </header>
+      <img class="featured-song__cover" src="assets/song-squid-squirm.jpg" alt="Squiddo splashes beside a pirate ship on the Squid Squirm cover" width="900" height="900">
+      <div class="featured-song__details">
+        <p class="lede">Ahoy! A pirate singalong with Squiddo.</p>
+        <a class="btn btn--pill btn--pink featured-song__play" href="https://www.youtube.com/channel/UCzql1oN74QTEb_fORW0GuMQ">Visit our YouTube <span aria-hidden="true">&#8599;</span></a>
+        <p class="fine-print featured-song__availability">Squid Squirm video link coming soon.</p>
+      </div>
+    </article>
   </section>
 
   <section id="activities" class="section themes">
