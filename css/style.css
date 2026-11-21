@@ -5,14 +5,14 @@
   --ink: #29282d;
   --muted: #5b5865;
   --pink: #fe7587;
-  --pink-bg: #fff0f1;
+  --pink-bg: #ffd9db;
   --blue: #59c8e8;
-  --blue-bg: #eaf8fc;
+  --blue-bg: #d7f3fa;
   --yellow: #ffd83d;
+  --yellow-bg: #fff3bd;
   --purple: #8c72d9;
   --lavender-bg: #f1ecfc;
   --green: #7bc96f;
-  --green-bg: #eff8eb;
   --border: #e8e2d8;
 
   --font-display: 'Fredoka', sans-serif;
@@ -429,8 +429,8 @@ h1, h2, h3, p { margin: 0; }
 }
 .benefit-card p { color: var(--muted); font-weight: 500; }
 .benefit-card--pink { background: var(--pink-bg); }
-.benefit-card--green { background: var(--green-bg); }
-.benefit-card--lavender { background: var(--lavender-bg); }
+.benefit-card--blue { background: var(--blue-bg); }
+.benefit-card--yellow { background: var(--yellow-bg); }
 
 /* ---------- Community ---------- */
 .community { display: flex; flex-direction: column; gap: 32px; }
@@ -445,6 +445,8 @@ h1, h2, h3, p { margin: 0; }
   gap: 20px;
   flex: 1 1 480px;
 }
+.community-card--youtube { background: var(--blue-bg); }
+.community-card--instagram { background: var(--pink-bg); }
 .community-card__copy { flex: 1; display: flex; flex-direction: column; gap: 16px; min-width: 0; }
 .community-card__copy h3 {
   font-family: var(--font-display);
