@@ -447,8 +447,8 @@ h1, h2, h3, p { margin: 0; }
 .about__note {
   flex: none;
   width: clamp(38px, 4.5vw, 54px);
-  height: auto;
 }
+.about__note img { width: 100%; height: auto; }
 .about__story p {
   color: var(--muted);
   font-size: clamp(1rem, 1.65vw, 1.125rem);
