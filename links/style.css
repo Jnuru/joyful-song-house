@@ -14,7 +14,7 @@
   justify-items: center;
   gap: 20px;
   width: 100%;
-  padding-block: 12px 58px;
+  padding-block: 18px clamp(60px, 7vw, 83px);
 }
 .link-page__art {
   display: block;
