@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdeed5">
+  <meta name="description" content="Find Joyful Songhouse singalongs, dance songs, and videos.">
+  <title>Listen &amp; Watch | Joyful Songhouse</title>
+  <link rel="canonical" href="https://joyfulsonghouse.com/links/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&amp;family=Nunito:wght@500;800;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/links/style.css">
+</head>
+<body>
+  <main class="link-page">
+    <header class="link-page__intro">
+      <img class="link-page__logo" src="/assets/footer-logo.png" alt="Joyful Songhouse" width="929" height="597">
+      <h1 class="headline">Listen &amp; Watch</h1>
+      <picture class="link-page__art link-page__art--squid" aria-hidden="true">
+        <source media="(prefers-reduced-motion: no-preference)" srcset="/assets/bio-squid-animated.png">
+        <img src="/assets/bio-squid-still.png" alt="" width="192" height="192">
+      </picture>
+      <picture class="link-page__art link-page__art--note" aria-hidden="true">
+        <source media="(prefers-reduced-motion: no-preference)" srcset="/assets/about-music-note-animated.png">
+        <img src="/assets/about-music-note.png" alt="" width="168" height="168">
+      </picture>
+    </header>
+    <nav class="link-page__destinations" aria-label="Joyful Songhouse links">
+      <a class="link-page__destination link-page__destination--youtube" href="https://www.youtube.com/channel/UCzql1oN74QTEb_fORW0GuMQ">
+        <img src="/assets/icon-youtube.svg" width="24" height="24" alt="">
+        <span>Watch on YouTube</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="link-page__destination link-page__destination--website" href="/">
+        <span class="link-page__house" aria-hidden="true">⌂</span>
+        <span>Visit Joyful Songhouse</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </nav>
+    <div class="link-page__end">
+      <picture class="link-page__art link-page__art--pirate" aria-hidden="true">
+        <source media="(prefers-reduced-motion: no-preference)" srcset="/assets/bio-pirate-animated.png">
+        <img src="/assets/bio-pirate-still.png" alt="" width="192" height="192">
+      </picture>
+      <div class="link-page__status">
+        <p class="link-page__coming-soon">Apple Music and Spotify coming soon.</p>
+        <button class="link-page__motion" type="button" hidden>Pause animations</button>
+      </div>
+    </div>
+  </main>
+  <script>
+    const animationSources = document.querySelectorAll('.link-page__art source');
+    const animationToggle = document.querySelector('.link-page__motion');
+    const motionAllowed = '(prefers-reduced-motion: no-preference)';
+    let paused = false;
+
+    animationToggle.addEventListener('click', () => {
+      paused = !paused;
+      for (const source of animationSources) {
+        source.media = paused ? 'not all' : motionAllowed;
+      }
+      animationToggle.textContent = paused ? 'Resume animations' : 'Pause animations';
+    });
+    animationToggle.hidden = false;
+  </script>
+</body>
+</html>
