@@ -439,6 +439,16 @@ h1, h2, h3, p { margin: 0; }
   max-width: 68ch;
   margin-inline: auto;
 }
+.about__heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.about__note {
+  flex: none;
+  width: clamp(38px, 4.5vw, 54px);
+  height: auto;
+}
 .about__story p {
   color: var(--muted);
   font-size: clamp(1rem, 1.65vw, 1.125rem);
