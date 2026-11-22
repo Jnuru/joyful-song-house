@@ -8,24 +8,43 @@
   text-align: center;
 }
 .link-page__logo { width: 128px; height: auto; }
-.link-page__characters {
+.link-page__intro {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(8px, 3vw, 17px);
-  width: min(100%, 345px);
-  margin-block: 2px 5px;
+  justify-items: center;
+  gap: 20px;
+  width: 100%;
+  padding-block: 12px 58px;
 }
 .link-page__art {
-  display: grid;
-  place-items: center;
+  display: block;
   aspect-ratio: 1;
-  padding: 8%;
-  border-radius: 50%;
+  pointer-events: none;
 }
 .link-page__art img { width: 100%; height: auto; }
-.link-page__art--squid { background: var(--pink-bg); }
-.link-page__art--note { background: var(--blue-bg); }
-.link-page__art--pirate { background: var(--yellow-bg); }
+.link-page__art--squid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(64px, 20vw, 108px);
+  transform: rotate(-8deg);
+}
+.link-page__art--note {
+  position: absolute;
+  right: 4px;
+  bottom: 0;
+  width: clamp(52px, 16vw, 74px);
+  transform: rotate(7deg);
+}
+.link-page__end {
+  display: grid;
+  grid-template-columns: clamp(68px, 18vw, 92px) minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+.link-page__art--pirate { width: 100%; transform: rotate(-6deg); }
+.link-page__status { text-align: left; }
 .link-page__destinations { display: grid; gap: 12px; width: 100%; }
 .link-page__destination {
   display: grid;
@@ -46,7 +65,8 @@
 .link-page__house { font: 900 1.6rem/1 var(--font-body); text-align: center; }
 .link-page__coming-soon { color: var(--muted); font-size: 0.9375rem; font-weight: 700; }
 .link-page__motion {
-  padding: 6px 12px;
+  margin-top: 4px;
+  padding: 6px 0;
   border: 0;
   background: transparent;
   color: var(--muted);

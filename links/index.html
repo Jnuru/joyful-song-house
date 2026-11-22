@@ -15,22 +15,18 @@
 </head>
 <body>
   <main class="link-page">
-    <img class="link-page__logo" src="/assets/footer-logo.png" alt="Joyful Songhouse" width="929" height="597">
-    <h1 class="headline">Listen &amp; Watch</h1>
-    <div class="link-page__characters" aria-hidden="true">
-      <picture class="link-page__art link-page__art--squid">
+    <header class="link-page__intro">
+      <img class="link-page__logo" src="/assets/footer-logo.png" alt="Joyful Songhouse" width="929" height="597">
+      <h1 class="headline">Listen &amp; Watch</h1>
+      <picture class="link-page__art link-page__art--squid" aria-hidden="true">
         <source media="(prefers-reduced-motion: no-preference)" srcset="/assets/bio-squid-animated.png">
         <img src="/assets/bio-squid-still.png" alt="" width="192" height="192">
       </picture>
-      <picture class="link-page__art link-page__art--note">
+      <picture class="link-page__art link-page__art--note" aria-hidden="true">
         <source media="(prefers-reduced-motion: no-preference)" srcset="/assets/about-music-note-animated.png">
         <img src="/assets/about-music-note.png" alt="" width="168" height="168">
       </picture>
-      <picture class="link-page__art link-page__art--pirate">
-        <source media="(prefers-reduced-motion: no-preference)" srcset="/assets/bio-pirate-animated.png">
-        <img src="/assets/bio-pirate-still.png" alt="" width="192" height="192">
-      </picture>
-    </div>
+    </header>
     <nav class="link-page__destinations" aria-label="Joyful Songhouse links">
       <a class="link-page__destination link-page__destination--youtube" href="https://www.youtube.com/channel/UCzql1oN74QTEb_fORW0GuMQ">
         <img src="/assets/icon-youtube.svg" width="24" height="24" alt="">
@@ -43,11 +39,19 @@
         <span aria-hidden="true">→</span>
       </a>
     </nav>
-    <p class="link-page__coming-soon">Apple Music and Spotify coming soon.</p>
-    <button class="link-page__motion" type="button" hidden>Pause animations</button>
+    <div class="link-page__end">
+      <picture class="link-page__art link-page__art--pirate" aria-hidden="true">
+        <source media="(prefers-reduced-motion: no-preference)" srcset="/assets/bio-pirate-animated.png">
+        <img src="/assets/bio-pirate-still.png" alt="" width="192" height="192">
+      </picture>
+      <div class="link-page__status">
+        <p class="link-page__coming-soon">Apple Music and Spotify coming soon.</p>
+        <button class="link-page__motion" type="button" hidden>Pause animations</button>
+      </div>
+    </div>
   </main>
   <script>
-    const animationSources = document.querySelectorAll('.link-page__characters source');
+    const animationSources = document.querySelectorAll('.link-page__art source');
     const animationToggle = document.querySelector('.link-page__motion');
     const motionAllowed = '(prefers-reduced-motion: no-preference)';
     let paused = false;
