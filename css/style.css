@@ -325,6 +325,8 @@ h1, h2, h3, p { margin: 0; }
   justify-items: start;
   gap: 16px;
 }
+.featured-song__listen { display: flex; flex-wrap: wrap; gap: 10px; }
+.featured-song__listen .btn { padding: 10px 16px; }
 .featured-song__play:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
 
 @media (max-width: 740px) {
@@ -337,6 +339,7 @@ h1, h2, h3, p { margin: 0; }
     gap: 20px;
   }
   .featured-song__details { justify-items: center; }
+  .featured-song__listen { justify-content: center; }
 }
 
 /* Keep section headings clear of the wrapping sticky navigation. */
