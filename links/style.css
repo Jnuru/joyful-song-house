@@ -59,11 +59,14 @@
   font-weight: 900;
   text-align: left;
 }
+.link-page__destination--apple { background: var(--pink-bg); }
+.link-page__destination--spotify { background: var(--green); }
+.link-page__destination--amazon { background: var(--yellow-bg); }
 .link-page__destination--youtube { background: var(--pink); }
 .link-page__destination--website { background: var(--blue-bg); }
 .link-page__destination:hover { box-shadow: 0 3px 0 var(--ink); }
 .link-page__house { font: 900 1.6rem/1 var(--font-body); text-align: center; }
-.link-page__coming-soon { color: var(--muted); font-size: 0.9375rem; font-weight: 700; }
+.link-page__note { font: 900 1.6rem/1 var(--font-body); text-align: center; }
 .link-page__motion {
   margin-top: 4px;
   padding: 6px 0;
